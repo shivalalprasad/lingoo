@@ -7,9 +7,11 @@ type Props = {
 
 export default function MarketingLayout({ children }: Props) {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      {children}
+      <main className="flex-1 flex flex-col items-center justify-center">
+        {children}
+      </main>
       <Footer />
     </div>
   );
