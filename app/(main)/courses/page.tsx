@@ -3,7 +3,7 @@ import { List } from "./List";
 
 export default async function CoursesPage() {
   const coursesData = getCourses();
-  const userProgressData = getUserProgress;
+  const userProgressData = getUserProgress();
 
   const [courses, userProgress] = await Promise.all([
     coursesData,

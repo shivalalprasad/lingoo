@@ -28,7 +28,7 @@ export const upsertUserProgress = async (courseId:number)=>{
 
   const existingUserProgress = await getUserProgress();
 
-  if(!existingUserProgress){
+  if(existingUserProgress){
     await db.update(UserProgress).set({
       activeCourseId: courseId,
       userName:user.firstName || "User",
