@@ -33,7 +33,7 @@ export const upsertUserProgress = async (courseId:number)=>{
       activeCourseId: courseId,
       userName:user.firstName || "user",
       // @ts-ignore
-      userIamgeSrc: user.imageUrl || '/mascot.svg',
+      useriamgeSrc: user.imageUrl || '/mascot.svg',
     });
 
     revalidatePath('/courses');
