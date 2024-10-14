@@ -5,7 +5,6 @@ import { neon } from '@neondatabase/serverless'
 import * as schema from '../db/schema'
 
 const sql = neon(process.env.DATABASE_URL!)
-// @ts-expect-error - there is no error in production
 const db = drizzle(sql, { schema })
 
 const main = async () => {
