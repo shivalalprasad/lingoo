@@ -10,6 +10,8 @@ import {
 } from "@clerk/nextjs";
 
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
+import { ExitModal } from "@/components/modals/use-exit-modal";
 
 const Varela = Varela_Round({
   subsets: ["latin"],
@@ -29,7 +31,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={Varela.className}>{children}</body>
+        <body className={Varela.className}>
+          <Toaster />
+          <ExitModal />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
