@@ -95,7 +95,7 @@ const main = async () => {
         id: 1,
         lessonId: 1, // Substantivos
         type: 'SELECT',
-        question: 'Qual das seguintes opções significa "O Homem"?',
+        question: 'Which of the following means "The Man"?',
         order: 1,
       },
       {
