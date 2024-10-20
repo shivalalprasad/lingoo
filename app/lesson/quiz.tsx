@@ -1,6 +1,6 @@
 "use client";
 
-import { challengeOptions, challenges } from "@/db/schema";
+import { challengeOptions, challenges, userSubscription } from "@/db/schema";
 import Confetti from "react-confetti";
 import { useState, useTransition } from "react";
 import { Header } from "./header";
@@ -25,7 +25,11 @@ type Props = {
   })[];
   initialHearts: number;
   initialPercentage: number;
-  userSubscription: any; // TODO: replace with subscription DB type
+  userSubscription:
+    | (typeof userSubscription.$inferSelect & {
+        isActive: boolean;
+      })
+    | null;
 };
 
 const Quiz = ({
@@ -158,7 +162,6 @@ const Quiz = ({
     }
   };
 
-  // TODO: remove true
   if (!challenge) {
     return (
       <>
