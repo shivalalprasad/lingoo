@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 const App = dynamic(() => import("./app"), { ssr: false });
 const AdminPage = () => {
-  if (!isAdmin) redirect("/");
+  if (!isAdmin()) redirect("/");
   return <App />;
 };
 
